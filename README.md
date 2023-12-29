@@ -1,4 +1,4 @@
-The onepiece-framework app skeleton 2023
+<img src="https://avatars.githubusercontent.com/u/9214397?s=48&v=4" style="height:1em"> The onepiece-framework app skeleton 2023
 ===
 
 # Overview
