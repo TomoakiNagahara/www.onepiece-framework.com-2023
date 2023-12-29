@@ -1,0 +1,14 @@
+
+/** op-skeleton-2023:/www/css/reset.css
+ *
+ * @created   2023-12-29
+ * @version   1.0
+ * @package   op-skeleton-2023
+ * @author    Tomoaki Nagahara <tomoaki.nagahara@gmail.com>
+ * @copyright Tomoaki Nagahara All right reserved.
+ */
+
+* {
+	margin:  0;
+	padding: 0;
+}
