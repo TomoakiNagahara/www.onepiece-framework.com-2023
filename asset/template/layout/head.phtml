@@ -1,0 +1,56 @@
+<?php
+/** op-skeleton-2023:/asset/template/layout/head.php
+ *
+ * @creation	2018-04-12
+ * @copied		2023-12-27
+ * @version		1.0
+ * @package		op-skeleton-2023
+ * @author		Tomoaki Nagahara <tomoaki.nagahara@gmail.com>
+ * @copyright	Tomoaki Nagahara All right reserved.
+ */
+
+/** Declare strict
+ *
+ */
+declare(strict_types=1);
+
+/** namespace
+ *
+ */
+namespace OP;
+
+//	...
+$config = [];
+foreach( ['html'] as $unit ){
+	$config[$unit] = OP()->Config()->Get($unit);
+}
+
+//	...
+$charset  = $config['html']['charset'] ?? 'UTF-8';
+$title    = OP()->App()->Title();
+
+?>
+
+	<!-- Charset -->
+	<meta charset="<?= $charset ?>" />
+	<meta http-equiv="Content-Type"  content="text/html; charset=<?= $charset ?>" />
+
+	<!-- For SmartPhone -->
+	<!-- Disable auto scaling -->
+	<meta name="viewport"            content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+	<!-- Disable phone number highlight -->
+	<meta name="format-detection"    content="telephone=no" />
+
+	<?php if( $config['html']['canonical'] ?? null ): ?>
+	<!-- Canonical -->
+	<link rel="canonical" href="<?= OP()->App()->Canonical() ?>" />
+	<?php endif; ?>
+
+	<!-- Stylesheet -->
+	<link type="text/css"         href="<?= OP()->MetaPath()->URL('app:/css/index.css') ?>" rel="stylesheet">
+
+	<!-- JavaScript -->
+	<script type="text/javascript" src="<?= OP()->MetaPath()->URL('app:/js/index.js') ?>" defer></script>
+
+	<!-- title -->
+	<title><?= $title ?></title>
