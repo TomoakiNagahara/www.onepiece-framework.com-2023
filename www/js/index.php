@@ -58,3 +58,12 @@ foreach( $roots as $root ){
 		OP()->Template($file);
 	}
 }
+
+//	WebPack
+if( $is_admin ){
+	/* @var $webpack \OP\UNIT\WebPack */
+	if( $webpack = Unit('WebPack') ){
+		//	Output packing string.
+		$webpack->Out($extention);
+	};
+}
