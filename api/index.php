@@ -3,7 +3,7 @@
  *
  * @created		2023-12-29
  * @version		1.0
- * @package		op-app-skeleton-2023
+ * @package		op-skeleton-2023
  * @author		Tomoaki Nagahara <tomoaki.nagahara@gmail.com>
  * @copyright	Tomoaki Nagahara All right reserved.
  */
