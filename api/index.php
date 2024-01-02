@@ -18,6 +18,12 @@ declare(strict_types=1);
  */
 namespace OP;
 
+//	CORS (Cross-Origin Resource Sharing)
+if( true ){
+	header('Access-Control-Allow-Origin: *'); // All
+	header('Access-Control-Allow-Headers: "X-Requested-With, Origin, X-Csrftoken, Content-Type, Accept"');
+}
+
 /* @var $api \OP\UNIT\Api */
 $api = OP()->Unit('Api');
 
