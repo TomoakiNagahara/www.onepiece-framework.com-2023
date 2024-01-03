@@ -21,8 +21,12 @@ declare(strict_types=1);
  */
 namespace OP;
 
-/**	Execute time.
+/**	Calc execute time.
  *
+ * @created ????-??-??
+ * @moved   2019-12-12	asset:/app.php --> app:/app.php
+ * @changed 2019-01-03	$st --> _OP_APP_START_
+ * @copied  2023-12-29	op-skeleton-2022
  */
 define('_OP_APP_START_', microtime(true));
 
@@ -37,7 +41,9 @@ require('../asset/init.php');
 try {
 	//	Launch application.
 	OP()->App()->Auto();
-
 } catch ( \Throwable $e ){
 	OP()->Notice($e);
 }
+
+//	...
+include('../asset/template/app.phtml');
