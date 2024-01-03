@@ -19,4 +19,18 @@ declare(strict_types=1);
 namespace OP;
 
 ?>
-<p>index.phtml</p>
+<article id="top">
+	<div data-i18n="true" data-i18n-locale="en">
+		<h1>Welcome to onepiece-framework.com</h1>
+		<p>
+			The onepiece-framework is insanely great!!
+			This is very intuitive design.
+			Our before framework will obsolete.
+			This framework will destructive innovators.
+		</p>
+	</div>
+</article>
+<section>
+	<h1 data-translate="true">Please choose your use language</h1>
+	<?php OP()->Unit('Translate')->Language()->List('html') ?>
+</section>
