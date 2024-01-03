@@ -21,7 +21,7 @@ declare(strict_types=1);
  */
 namespace OP;
 
-/**	Execute time.
+/**	Calc execute time.
  *
  */
 define('_OP_APP_START_', microtime(true));
@@ -37,7 +37,9 @@ require('../asset/init.php');
 try {
 	//	Launch application.
 	OP()->App()->Auto();
-
 } catch ( \Throwable $e ){
 	OP()->Notice($e);
 }
+
+//	...
+include('../asset/template/app.phtml');
