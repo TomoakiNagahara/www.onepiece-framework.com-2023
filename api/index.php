@@ -34,5 +34,8 @@ $api->Error('This is test2.');
 //	...
 //OP()->Notice('This is to admin notice.');
 
+//	Dispatch to action.php
+include('dispatcher.php');
+
 //	...
 $api->Out();
