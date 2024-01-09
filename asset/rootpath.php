@@ -93,6 +93,7 @@ RootPath('asset'    , $asset_root               );
 RootPath('op'       , $asset_root.'core'        );
 RootPath('core'     , $asset_root.'core'        );
 RootPath('template' , $asset_root.'template'    );
-RootPath('unit'     , realpath($asset_root.'unit'   ) );
+RootPath('unit'     , realpath($asset_root.'unit'   ) ); // Why converting to real path?
 RootPath('layout'   , realpath($asset_root.'layout' ) );
 RootPath('webpack'  , realpath($asset_root.'webpack') );
+RootPath('module'   , $asset_root.'module'      );
