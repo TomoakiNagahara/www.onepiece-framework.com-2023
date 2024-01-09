@@ -14,4 +14,10 @@
  * @return    array        $config
  */
 return [
+	'translate' => true,
+	'etag'      => true,
+	'markdown'  => true,
+	'highlight' => true,
+	'darkmode'  => true,
+	'webpack'	=> true,
 ];
