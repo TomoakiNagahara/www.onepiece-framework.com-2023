@@ -60,7 +60,7 @@ foreach( $roots as $root ){
 }
 
 //	WebPack
-if( $is_admin ){
+if( $is_admin and OP()->Config('execute')['webpack'] ?? true ){
 	/* @var $webpack \OP\UNIT\WebPack */
 	if( $webpack = Unit('WebPack') ){
 		//	Output packing string.
