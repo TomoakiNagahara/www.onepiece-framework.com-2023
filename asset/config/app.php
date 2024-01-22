@@ -32,7 +32,7 @@ if( OP()->Env()->isHttp() ){
  */
 return [
 	'etag'      =>  false,
-	'title'     => 'The onepiece-framework app skeleton 2023',
+	'title'     => 'onepiece-framework.com',
 	'copyright' => 'Copyright 2009 All right reserved.',
 	'app.phtml' =>  OP()->Env()->isAdmin() ? true: false,
 ];
