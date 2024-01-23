@@ -18,52 +18,10 @@ declare(strict_types=1);
  */
 namespace OP;
 
-//	Init
-$is_admin   = OP()->Env()->isAdmin();	//	Get isAdmin.
-$layout     = OP()->Layout()->Name();	//	Get current layout name.
-$extention  = basename(__DIR__);
-$index_file = "index.{$extention}";
-
 //	...
-$roots = [
-	'./',
-	OP()->MetaPath()->Decode("layout:/{$layout}/{$extention}/"),
-];
-
-//	...
-foreach( $roots as $root ){
-	//	...
-	chdir($root);
-
-	//	...
-	if(!$is_admin and file_exists($index_file) ){
-		include($index_file);
-		continue;
-	}
-
-	//	...
-	foreach( glob("*.{$extention}") as $file ){
-		//	...
-		if( $file === $index_file ){
-			//	index_file is already packaged file.
-			continue;
-		}
-
-		//	...
-		if( $file[0] === '.' or $file[0] === '_' ){
-			continue;
-		}
-
-		//	...
-		OP()->Template($file);
-	}
-}
-
-//	WebPack
-if( $is_admin and OP()->Config('execute')['webpack'] ?? true ){
-	/* @var $webpack \OP\UNIT\WebPack */
-	if( $webpack = Unit('WebPack') ){
-		//	Output packing string.
-		$webpack->Out($extention);
-	};
-}
+$extension = basename(__DIR__);
+$layout    = OP()->Request('layout') ?? OP()->Layout()->Name();
+OP()->WebPack()->Auto("asset:/webpack/{$extension}/");
+OP()->WebPack()->Auto("asset:/layout/{$layout}/{$extension}/");
+OP()->WebPack()->Auto('./');
+OP()->WebPack()->Auto();
