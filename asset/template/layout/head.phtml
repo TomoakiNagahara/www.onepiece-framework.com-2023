@@ -28,7 +28,9 @@ foreach( ['html'] as $unit ){
 //	...
 $charset  = $config['html']['charset'] ?? 'UTF-8';
 $title    = OP()->App()->Title();
-
+$layout   = OP()->Layout()->Name();
+$hash_js  = OP()->WebPack()->Hash('js');
+$hash_css = OP()->WebPack()->Hash('css');
 ?>
 
 	<!-- Charset -->
@@ -47,10 +49,10 @@ $title    = OP()->App()->Title();
 	<?php endif; ?>
 
 	<!-- Stylesheet -->
-	<link type="text/css"         href="<?= OP()->MetaPath()->URL('app:/css/index.css') ?>" rel="stylesheet">
+	<link type="text/css" href="/css/index.css?layout=<?= $layout ?>&hash=<?= $hash_css ?>" rel="stylesheet">
 
 	<!-- JavaScript -->
-	<script type="text/javascript" src="<?= OP()->MetaPath()->URL('app:/js/index.js') ?>" defer></script>
+	<script type="text/javascript" src="/js/index.js?layout=<?= $layout ?>&hash=<?= $hash_js ?>" defer></script>
 
 	<!-- title -->
 	<title><?= $title ?></title>
