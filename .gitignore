@@ -1,4 +1,5 @@
 .*
 _*
 asset/cache/*
+*.log
 
