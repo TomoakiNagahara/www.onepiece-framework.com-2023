@@ -25,17 +25,7 @@ require_once('common.php');
 $api = OP()->Unit('Api');
 
 //	...
-$api->Admin('file', __FILE__);
-
-//	...
-$api->Set('layout', OP()->Layout()->Name());
-
-//	...
-$api->Error('This is test1.');
-$api->Error('This is test2.');
-
-//	...
-//OP()->Notice('This is to admin notice.');
+$api->Admin('file', OP()->MetaPath()->Encode(__FILE__));
 
 //	Dispatch to action.php
 include('dispatcher.php');
