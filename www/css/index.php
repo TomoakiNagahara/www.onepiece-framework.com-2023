@@ -21,6 +21,12 @@ namespace OP;
 //	...
 $extension = basename(__DIR__);
 $layout    = OP()->Request('layout') ?? OP()->Layout()->Name();
+
+//	Load the import file first.
+OP()->WebPack()->Auto("asset:/webpack/{$extension}/import.css");
+OP()->WebPack()->Auto("asset:/layout/{$layout}/{$extension}/import.css");
+
+//	Others
 OP()->WebPack()->Auto("asset:/webpack/{$extension}/");
 OP()->WebPack()->Auto("asset:/layout/{$layout}/{$extension}/");
 OP()->WebPack()->Auto('./');
