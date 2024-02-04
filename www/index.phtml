@@ -18,9 +18,12 @@ declare(strict_types=1);
  */
 namespace OP;
 
+//	...
+OP()->App()->Title('TOP')
+
 ?>
 <article id="top">
-	<div data-i18n="true" data-i18n-locale="en">
+	<div data-translate="true" data-language="en">
 		<h1>Welcome to onepiece-framework.com</h1>
 		<p>
 			The onepiece-framework is insanely great!!
@@ -29,8 +32,42 @@ namespace OP;
 			This framework will destructive innovators.
 		</p>
 	</div>
+	<script>
+	document.addEventListener('DOMContentLoaded', async function(){
+
+	document.querySelectorAll('[data-translate="true"]').forEach( async function(element){
+		const lang = element.getAttribute('data-language');
+		const html = element.innerHTML;
+		const tran = await $OP.Translate.Fetch(html);
+		element.innerHTML = tran;
+	});
+
+	//	const test = $OP.Translate.Fetch('This is a new World.');
+	});
+	</script>
 </article>
 <section>
 	<h1 data-translate="true">Please choose your use language</h1>
-	<?php OP()->Unit('Translate')->Language()->List('html') ?>
+
+	<!-- Display area -->
+	<ul class="translate language list" id="<?= OP()->Config('translate')['language_area_id'] ?>"></ul>
+
+	<!-- Template tag -->
+	<template><li class="" data-lang=""></li></template>
+
+	<!-- JavaScript -->
+	<script>
+	document.addEventListener('DOMContentLoaded', async function(){
+		//	...
+		const json = await $OP.Translate.Language.Fetch('https://api.onepiece-framework.com/i18n/translate/language/list/');
+
+		//	...
+		$OP.Translate.Language.Display(json);
+		$OP.Translate.Language.Event();
+	});
+	</script>
+	<?php
+	Unit::Load('Translate');
+//	OP()->Unit('Translate')->Language()->List('html');
+	?>
 </section>
