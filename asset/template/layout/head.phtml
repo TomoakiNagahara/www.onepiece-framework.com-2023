@@ -26,11 +26,12 @@ foreach( ['html'] as $unit ){
 }
 
 //	...
-$charset  = $config['html']['charset'] ?? 'UTF-8';
-$title    = OP()->App()->Title();
-$layout   = OP()->Layout()->Name();
-$hash_js  = OP()->WebPack()->Hash('js');
-$hash_css = OP()->WebPack()->Hash('css');
+$charset   = $config['html']['head']['charset']   ?? 'UTF-8';
+$title     = $config['html']['head']['title']     ?? null;
+$canonical = $config['html']['head']['canonical'] ?? null;
+$layout    = OP()->Layout()->Name();
+$hash_js   = OP()->WebPack()->Hash('js');
+$hash_css  = OP()->WebPack()->Hash('css');
 ?>
 
 	<!-- Charset -->
@@ -43,9 +44,9 @@ $hash_css = OP()->WebPack()->Hash('css');
 	<!-- Disable phone number highlight -->
 	<meta name="format-detection"    content="telephone=no" />
 
-	<?php if( $config['html']['canonical'] ?? null ): ?>
+	<?php if( $canonical ): ?>
 	<!-- Canonical -->
-	<link rel="canonical" href="<?= OP()->App()->Canonical() ?>" />
+	<link rel="canonical" href="<?= $canonical ?>" />
 	<?php endif; ?>
 
 	<!-- Stylesheet -->
