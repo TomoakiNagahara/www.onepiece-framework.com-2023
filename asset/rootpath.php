@@ -76,7 +76,7 @@ if( file_exists("{$app_root}/.git") ){
 	$git_root = dirname($app_root);
 }else{
 	$current = getcwd();
-	exit("Does not found .git directory. (doc_root={$doc_root}, app_root={$app_root}, current={$current})");
+	throw new \Exception("Does not found .git directory. (doc_root={$doc_root}, app_root={$app_root}, current={$current})");
 }
 
 //	Real path --> alias path
