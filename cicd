@@ -42,8 +42,9 @@ foreach( ['ci','cd'] as $cicd ){
     if( $output ){
         echo join("\n", $output)."\n";
     }
-    //  ...
+    //  $status === 1 is successful.
+    //  Because, null is returned if a fatal error occurs.
     if( empty($status) ){
-        exit($status);
+        exit(1);
     }
 }
