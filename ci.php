@@ -48,7 +48,7 @@ try {
 	OP::Unit('Git')->Save();
 
 	//	...
-	$result = OP::Unit('CI')->Auto();
+	$result = OP::Unit('CI')->Auto() ? 1: 0;
 
 } catch ( \Throwable $e ){
 	//	...
