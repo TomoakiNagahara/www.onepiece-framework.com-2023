@@ -1,5 +1,5 @@
 <?php
-/** op-app-skeleton-2020-nep:/ci.php
+/** op-skeleton-2020:/ci.php
  *
  # <pre>
  # How to use: `php ci.php`
@@ -12,7 +12,7 @@
  * @moved     2022-10-31 | op-module-develop:/selfcheck/action.php
  * @moved     2022-10-31 | op-app-skeleton-2020-nep:/ci.php
  * @version   2.0
- * @package   op-app-skeleton-2020-nep
+ * @package   op-skeleton-2020
  * @author    Tomoaki Nagahara <tomoaki.nagahara@gmail.com>
  * @copyright Tomoaki Nagahara All right reserved.
  */
@@ -58,10 +58,7 @@ try {
 	echo "\n\n";
 	echo "Exception: ".$message."\n\n";
 	foreach( $e->getTrace() as $trace){
-        /*
-		echo ' * '.OP::DebugBacktraceToString($trace)."\n";
-        */
-	    echo ' * ' . DebugBacktrace::Numerator($trace) . "\n";
+		echo ' * ' . DebugBacktrace::Numerator($trace) . "\n";
 	}
 	echo "\n";
 }
