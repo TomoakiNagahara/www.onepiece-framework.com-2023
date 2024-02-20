@@ -1,5 +1,9 @@
 .*
 _*
-asset/cache/*
 *.log
-
+asset/cache/*
+asset/core
+asset/layout
+asset/module
+asset/unit
+asset/webpack
