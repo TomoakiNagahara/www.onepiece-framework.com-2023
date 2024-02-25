@@ -90,7 +90,7 @@ RootPath('real'     , realpath($git_root)       );
 RootPath('doc'      , $doc_root                 );
 RootPath('app'      , $app_root                 );
 RootPath('asset'    , $asset_root               );
-RootPath('op'       , $asset_root.'core'        );
+RootPath('op'       , realpath($asset_root.'core'   ) ); // Support to alias path.
 RootPath('core'     , $asset_root.'core'        );
 RootPath('template' , $asset_root.'template'    );
 RootPath('unit'     , realpath($asset_root.'unit'   ) ); // Why converting to real path?
