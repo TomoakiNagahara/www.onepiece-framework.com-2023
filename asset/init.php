@@ -2,6 +2,7 @@
 /** op-app-skeleton-2023:/asset/init.php
  *
  * @created		2018-03-27
+ * @renamed		2023-01-01   app.php --> init.php
  * @copied		2023-12-27
  * @version		1.0
  * @package		op-app-skeleton-2023
@@ -30,7 +31,6 @@ try {
 	 * @moved     2022-10-30   bootstrap.php | Initialize onepiece-framework application.
 	 * @added     2022-10-30   rootpath.php  | Set meta root path file.
 	 * @added     2022-12-17   check.php     | Check php module install and apache setting.
-	 * @renamed   2023-01-01   app.php --> init.php
 	 * @copied    2023-12-27   op-skeleton-2022 --> op-skeleton-2023
 	 */
 	foreach([
