@@ -53,10 +53,14 @@ try {
 } catch ( \Throwable $e ){
 	//	...
 	$message = $e->getMessage();
+	$file    = $e->getFile();
+	$line    = $e->getLine();
+	$file    = OP()->MetaPath($file);
 
 	//	...
 	echo "\n\n";
 	echo "Exception: ".$message."\n\n";
+	echo " * {$file} #{$line}\n";
 	foreach( $e->getTrace() as $trace){
 		echo ' * ' . DebugBacktrace::Numerator($trace) . "\n";
 	}
