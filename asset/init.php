@@ -32,12 +32,14 @@ try {
 	 * @added     2022-10-30   rootpath.php  | Set meta root path file.
 	 * @added     2022-12-17   check.php     | Check php module install and apache setting.
 	 * @copied    2023-12-27   op-skeleton-2022 --> op-skeleton-2023
+	 * @added     2024-02-27   Preload.php   | Preload main files.
 	 */
 	foreach([
 		'config/php',
 		'config/op',
 		'bootstrap',
 		'rootpath',
+		'preload',
 		/*
 		'config',
 		'_config',
