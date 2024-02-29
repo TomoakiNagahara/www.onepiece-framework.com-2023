@@ -65,8 +65,8 @@ try {
 	if( RootPath() and class_exists('OP\Notice', true) ){
 		Notice::Set($e);
 	}else{
-		echo '<pre>';
-		echo $e->getMessage() . "\n";
+		echo '<pre>'."\n";
+		echo $e->getMessage() . "\n\n";
 		echo $e->getTraceAsString() . "\n";
 		echo '</pre>';
 	}
