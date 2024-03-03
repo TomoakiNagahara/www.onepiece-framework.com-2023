@@ -23,5 +23,4 @@ namespace OP;
  * @return    array        $config
  */
 return [
-	'layout' => 'flexbox',
 ];
