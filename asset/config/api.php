@@ -23,4 +23,7 @@ namespace OP;
  * @return    array        $config
  */
 return [
+	/*
+	'GetRequestFromHash' => 0,
+	*/
 ];
