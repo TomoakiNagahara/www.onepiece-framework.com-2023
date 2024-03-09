@@ -13,7 +13,11 @@
  */
 namespace OP;
 
-//	...
+/** Can to convert a meta-path from full-path.
+ *
+ * @created    2024-03-03
+ * @var        array      $meta_path
+ */
 $meta_path = [
 	'CanConvertFromFullPath' => false,
 ];
