@@ -22,7 +22,20 @@ $meta_path = [
 	'CanConvertFromFullPath' => false,
 ];
 
+/** Select template logic.
+ *
+ * core      --> core:/function/Template.php
+ * template  --> op-unit-template
+ * template2 --> op-unit-template2
+ * sandbox   --> op-unit-sandbox
+ *
+ * @created    2024-03-09
+ * @var        string     $template
+ */
+$template = 'core';
+
 //	...
 return [
 	'MetaPath' => $meta_path,
+	'Template' => $template,
 ];
