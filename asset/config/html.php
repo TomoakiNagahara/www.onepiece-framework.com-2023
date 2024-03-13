@@ -24,4 +24,7 @@ namespace OP;
  */
 return [
 	'lang' => 'en',
+	'head' => [
+		'title' => 'The onepiece-framework app skeleton 2023',
+	],
 ];
