@@ -22,6 +22,11 @@ namespace OP;
 $extension = basename(__DIR__);
 $layout    = OP()->Request('layout') ?? OP()->Layout()->Name();
 
+//	Set each layout default config.
+$path = MetaPath::Decode("asset:/layout/{$layout}/config.php");
+$config = include( $path );
+Config::Set($layout, $config);
+
 //	Load the import file first.
 OP()->WebPack()->Auto("asset:/webpack/{$extension}/import.css");
 OP()->WebPack()->Auto("asset:/layout/{$layout}/{$extension}/import.css");
