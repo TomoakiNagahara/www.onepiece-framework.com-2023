@@ -35,6 +35,12 @@ namespace OP;
  */
 define('_OP_APP_START_', microtime(true));
 
+/** CI AppID
+ *
+ * @created    2024-03-15
+ */
+define('_OP_APP_ID_CI_', 'CI');
+
 //	...
 try {
 	//	...
@@ -42,7 +48,7 @@ try {
 	include(__DIR__.'/asset/init.php');
 
 	//	...
-	Env::AppID( OP::Config('ci')['app_id'] );
+	Env::AppID( _OP_APP_ID_CI_ );
 
 	// ...
 	OP::Unit('Git')->Save();
