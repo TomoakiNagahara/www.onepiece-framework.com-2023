@@ -64,12 +64,10 @@ try {
 	$file    = OP()->MetaPath($file);
 
 	//	...
-	echo "\n\n";
+	echo "\n";
 	echo "Exception: ".$message."\n\n";
-	echo " * {$file} #{$line}\n";
-	foreach( $e->getTrace() as $trace){
-		echo ' * ' . DebugBacktrace::Numerator($trace) . "\n";
-	}
+	echo "{$file} #{$line}\n";
+	DebugBacktrace::Auto($e->getTrace());
 	echo "\n";
 }
 
