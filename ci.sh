@@ -22,7 +22,7 @@ BRANCH=${ARRAY[3]}
 PHP=`php -r "echo PHP_MAJOR_VERSION.PHP_MINOR_VERSION;"`
 
 # Get current branch name
-#BRANCH=`git rev-parse --abbrev-ref HEAD`
+BRANCH=`git rev-parse --abbrev-ref HEAD`
 if [ ! $BRANCH ]; then
   echo "ci.sh: Empty branch name."
   exit 1
