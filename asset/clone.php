@@ -1,6 +1,12 @@
 <?php
 /** op-skeleton-2023:/asset/clone.php
- *s
+ *
+ * Extract the Git repository to "/www/op/" from "~/repo/op/".
+ *
+ * <pre>
+ * php asset/git/clone.php
+ * </pre>
+ *
  * @created   2023-12-25
  * @version   1.0
  * @package   op
