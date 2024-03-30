@@ -70,7 +70,6 @@ $app_root = $_SERVER['APP_ROOT'];
 $doc_root = $_SERVER['DOCUMENT_ROOT'];
 
 //	Git root
-/*
 if( file_exists("{$app_root}/.git") ){
 	$git_root = $app_root;
 }else if( file_exists(dirname($app_root).'/.git') ){
@@ -79,9 +78,6 @@ if( file_exists("{$app_root}/.git") ){
 	$current = getcwd();
 	throw new \Exception("Does not found .git directory. (doc_root={$doc_root}, app_root={$app_root}, current={$current})");
 }
-*/
-//	git rev-parse --show-superproject-working-tree --show-toplevel | head -1
-$git_root = trim(`git rev-parse --show-toplevel`);
 
 //	Real path --> alias path
 if( strpos($asset_root, realpath(dirname($doc_root))) === 0 ){
