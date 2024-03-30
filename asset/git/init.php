@@ -21,3 +21,7 @@ declare(strict_types=1);
  *
  */
 namespace OP;
+
+//	Change to git root.
+chdir(trim(`git rev-parse  --show-toplevel`));
+
