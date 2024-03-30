@@ -1,5 +1,5 @@
 <?php
-/** op-skeleton-2023:/asset/clone.php
+/** op-skeleton-2023:/asset/git/clone.php
  *
  * Extract the Git repository to "/www/op/" from "~/repo/op/".
  *
@@ -9,7 +9,7 @@
  *
  * @created   2023-12-25
  * @version   1.0
- * @package   op
+ * @package   op-skeleton-2023
  * @author    Tomoaki Nagahara <tomoaki.nagahara@gmail.com>
  * @copyright Tomoaki Nagahara All right reserved.
  */
