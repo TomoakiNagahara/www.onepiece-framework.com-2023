@@ -51,11 +51,9 @@ try {
 		$file = __DIR__.'/'.$file.'.php';
 
 		//	Include file into closure.
-		if( file_exists($file) ){
 			call_user_func(function($file){
-				include($file);
+				require_once($file);
 			}, $file);
-		}
 	}
 
 	//	...
@@ -67,6 +65,7 @@ try {
 		Notice::Set($e);
 	}else{
 		echo '<pre>'."\n";
+		echo __FILE__."\n";
 		echo $e->getMessage() . "\n\n";
 		echo $e->getTraceAsString() . "\n";
 		echo '</pre>';
