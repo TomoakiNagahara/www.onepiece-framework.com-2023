@@ -1,11 +1,11 @@
 <?php
-/** op-app-skeleton-2023:/asset/init.php
+/** op-skeleton-2023:/asset/init.php
  *
  * @created		2018-03-27
  * @renamed		2023-01-01   app.php --> init.php
  * @copied		2023-12-27
  * @version		1.0
- * @package		op-app-skeleton-2023
+ * @package		op-skeleton-2023
  * @author		Tomoaki Nagahara <tomoaki.nagahara@gmail.com>
  * @copyright	Tomoaki Nagahara All right reserved.
  */
@@ -33,11 +33,12 @@ try {
 	 * @added     2022-12-17   check.php     | Check php module install and apache setting.
 	 * @copied    2023-12-27   op-skeleton-2022 --> op-skeleton-2023
 	 * @added     2024-02-27   Preload.php   | Preload main files.
+	 * @deleted   2024-03-29   bootstrap.php | Direct load of core/Bootstrap.php.
 	 */
 	foreach([
 		'config/php',
 		'config/op',
-		'bootstrap',
+		'core/Bootstrap',
 		'rootpath',
 		'preload',
 		/*
