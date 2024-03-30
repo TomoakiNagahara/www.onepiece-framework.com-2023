@@ -41,6 +41,19 @@ chdir(__DIR__);
 
 //  ...
 foreach( ['ci','cd'] as $cicd ){
+	//	...
+	if(!file_exists("{$cicd}.php") ){
+		//	...
+		$cicd = ".{$cicd}";
+
+		//	...
+		if(!file_exists("{$cicd}.php")){
+			echo "Does not file exist. ({$cicd}.php)\n";
+			exit(1);
+		}
+	}
+
+    //  ...
     $output = null;
     $status = null;
     $comand = "{$php} {$cicd}.php {$argv1} {$argv2} {$argv3} {$argv4} {$argv5} {$argv6} {$argv7} {$argv8} {$argv9}";
