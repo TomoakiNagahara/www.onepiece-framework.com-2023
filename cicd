@@ -36,6 +36,9 @@ $argv7 = $_SERVER['argv'][7] ?? '';
 $argv8 = $_SERVER['argv'][8] ?? '';
 $argv9 = $_SERVER['argv'][9] ?? '';
 
+//	...
+chdir(__DIR__);
+
 //  ...
 foreach( ['ci','cd'] as $cicd ){
     $output = null;
