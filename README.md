@@ -12,9 +12,8 @@
   The "onepiece-framework" has "NEW WORLD".
   The "NEW WORLD" is a new world.
 
- * Super Smart URL
  * Intuitive hierarchy file system and URL.
- * "Super-Smart-Dispatcher"
- * "Super-Smart-URL"
- * "Meta-Path" and "Meta-URL"
- * "HTML-pass-through"
+ * Super Smart URL
+ * Meta-Path and Meta-URL
+ * HTML-pass-through
+ * Time Machine
