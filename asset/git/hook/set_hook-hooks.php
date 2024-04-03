@@ -41,6 +41,11 @@ foreach( ['unit','layout','module','webpack'] as $base ){
 		//	...
 		echo getcwd() . "\n";
 		//	...
+		if( $hooks_dir = trim(`git config --get core.hooksPath` ?? '') ){
+			echo "Already set custom local hooks: {$hooks_dir}\n";
+		}else{
+		//	Set git root's local hooks directory.
 		`git config --local core.hooksPath {$git_root}/{$local_hooks}`;
+		}
 	}
 }
