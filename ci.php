@@ -50,8 +50,10 @@ try {
 	//	...
 	Env::AppID( _OP_APP_ID_CI_ );
 
+	/*
 	// ...
 	OP::Unit('Git')->Save();
+	*/
 
 	//	...
 	$result = OP::Unit('CI')->Auto() ? 1: 0;
@@ -71,8 +73,10 @@ try {
 	echo "\n";
 }
 
+/*
 // ...
 OP::Unit('Git')->Pop();
+*/
 
 //	exit
 exit($result ?? null);
